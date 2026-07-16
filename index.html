@@ -6,6 +6,7 @@
     <title>AKAISHA S Boutique Studio | Designer Bridal Boutique Mumbai</title>
     <meta name="description" content="AKAISHA S Boutique Studio is a luxury ladies fashion boutique in Santacruz, Mumbai, with 10+ years of experience in designer bridal wear, customized blouses, Indo-Western outfits, western wear, premium stitching, and personalized fashion consultation." />
     <meta name="keywords" content="Designer Boutique Mumbai, Ladies Boutique Mumbai, Designer Blouse Mumbai, Bridal Boutique Mumbai, Custom Stitching Mumbai, Bridal Lehenga Designer, Fashion Designer Mumbai, Indo Western Boutique, Wedding Dress Boutique, Boutique Near Me, Luxury Boutique Mumbai, Designer Dress Mumbai" />
+    <!-- Canonical kept for SEO (not visible on page) -->
     <link rel="canonical" href="https://akaishastudio.in" />
 
     <!-- Google Fonts -->
@@ -101,7 +102,7 @@
             left: 0;
             width: 100%;
             z-index: 999;
-            padding: 0.8rem 0;  /* increased padding for bigger logo */
+            padding: 0.8rem 0;
             transition: 0.35s ease;
             background: transparent;
         }
@@ -115,22 +116,24 @@
             align-items: center;
             justify-content: space-between;
         }
+        /* Logo - no longer a link, just a div */
         .logo {
             display: flex;
             align-items: center;
-            gap: 1rem;  /* increased gap */
+            gap: 1rem;
+            cursor: default;
         }
         .logo img {
-            height: 70px;  /* BIGGER LOGO */
+            height: 70px;
             width: auto;
             border-radius: 12px;
             object-fit: cover;
-            box-shadow: 0 4px 12px rgba(61, 26, 46, 0.15); /* subtle shadow for visibility */
+            box-shadow: 0 4px 12px rgba(61, 26, 46, 0.15);
             border: 2px solid var(--gold-light);
         }
         .logo-text {
             font-family: 'Playfair Display', serif;
-            font-size: 2rem;  /* bigger text */
+            font-size: 2rem;
             font-weight: 700;
             font-style: italic;
             color: var(--text-dark);
@@ -186,41 +189,45 @@
             background: linear-gradient(150deg, #FCE9F0 0%, #FDF6F9 65%, #F8EDF1 100%);
             position: relative;
             overflow: hidden;
-            padding-top: 5rem;
+            padding-top: 7rem;
         }
         .hero .row {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3.5rem;
+            grid-template-columns: 1fr 2fr;
+            gap: 2.5rem;
             align-items: center;
             position: relative;
             z-index: 2;
         }
 
-        .brand-mark {
+        .brand-logo {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
             padding: 0;
+            line-height: 1.2;
         }
-        .brand-mark .main-title {
+        .brand-logo .main-name {
             font-family: 'Playfair Display', serif;
-            font-size: 4.5rem;
-            font-weight: 700;
+            font-size: clamp(2.8rem, 10vw, 5.2rem);
+            font-weight: 600;
             font-style: italic;
+            letter-spacing: 4px;
             color: var(--text-dark);
-            letter-spacing: 2px;
+            text-shadow: 0 2px 4px rgba(61, 26, 46, 0.08);
             line-height: 1.1;
             margin: 0;
+            padding: 0;
         }
-        .brand-mark .main-title .highlight {
+        .brand-logo .main-name .highlight {
             color: var(--primary);
+            font-weight: 700;
         }
-        .brand-mark .sub-title {
+        .brand-logo .sub-name {
             font-family: 'Poppins', sans-serif;
-            font-size: 1.2rem;
+            font-size: clamp(0.9rem, 4vw, 1.4rem);
             font-weight: 300;
-            letter-spacing: 10px;
+            letter-spacing: 0.35em;
             text-transform: uppercase;
             color: var(--text-soft);
             border-top: 2px solid var(--gold-light);
@@ -230,10 +237,11 @@
         }
 
         .hero-content p {
-            font-size: 1.15rem;
-            margin: 1.2rem 0 2rem;
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
+            margin: 1rem 0 1.8rem;
             color: var(--text-soft);
             font-weight: 300;
+            max-width: 90%;
         }
         .hero-buttons {
             display: flex;
@@ -246,30 +254,31 @@
             box-shadow: var(--shadow-hover);
             aspect-ratio: 3/4;
             background: #E8D5D9;
+            max-height: 90vh;
+            width: 100%;
         }
         .hero-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transform: scale(1.2);
             transition: 0.4s ease;
         }
         .hero-image img:hover {
-            transform: scale(1.25);
+            transform: scale(1.03);
         }
 
         .scroll-indicator {
-            margin-top: 2.8rem;
+            margin-top: 2rem;
             display: flex;
             flex-direction: column;
             align-items: center;
             color: var(--primary);
-            font-size: 1.8rem;
+            font-size: 1.4rem;
             animation: bounce 2s infinite;
         }
         @keyframes bounce {
             0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(12px); }
+            50% { transform: translateY(8px); }
         }
 
         .section-title {
@@ -292,14 +301,14 @@
         .about-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 3.5rem;
+            gap: 3rem;
             align-items: center;
             padding: 4rem 0;
         }
         .about-grid .about-image-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 1rem;
+            gap: 0.8rem;
         }
         .about-grid .about-image-grid .img-crop {
             border-radius: 20px;
@@ -312,11 +321,11 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transform: scale(1.2);
+            transform: scale(1.15);
             transition: 0.35s ease;
         }
         .about-grid .about-image-grid .img-crop img:hover {
-            transform: scale(1.25);
+            transform: scale(1.2);
         }
         .about-grid .about-image-grid .wide {
             grid-column: span 2;
@@ -383,8 +392,8 @@
 
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.2rem;
         }
         .gallery-item {
             border-radius: 24px;
@@ -399,11 +408,11 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transform: scale(1.2);
+            transform: scale(1.15);
             transition: 0.5s ease;
         }
         .gallery-item:hover img {
-            transform: scale(1.25);
+            transform: scale(1.2);
         }
 
         .testimonial-card {
@@ -430,17 +439,18 @@
 
         .client-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+            gap: 1.5rem;
             align-items: center;
         }
         .client-item {
             background: #fff;
-            padding: 1.5rem;
+            padding: 1.2rem;
             border-radius: 20px;
             box-shadow: var(--shadow);
             text-align: center;
             font-weight: 500;
+            font-size: 0.9rem;
             transition: 0.3s ease;
         }
         .client-item:hover {
@@ -448,9 +458,9 @@
             box-shadow: var(--shadow-hover);
         }
         .client-item img {
-            max-width: 80px;
+            max-width: 70px;
             height: auto;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.4rem;
             border-radius: 10px;
         }
 
@@ -526,6 +536,7 @@
             color: var(--primary-light);
             transform: scale(1.1);
         }
+        /* Removed .canonical-link styles */
 
         .floating {
             position: fixed;
@@ -560,6 +571,8 @@
             .hero .row, .about-grid, .contact-grid {
                 grid-template-columns: 1fr;
             }
+            .hero .row { gap: 2rem; }
+            .hero-image { max-height: 50vh; }
             .stats-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
@@ -579,13 +592,27 @@
             }
             .nav-links.open { display: flex; }
             .hamburger { display: block; }
-            .brand-mark .main-title { font-size: 3.2rem; }
-            .brand-mark .sub-title { font-size: 1rem; letter-spacing: 5px; }
-            .logo img { height: 55px; }  /* slightly smaller on tablet but still big */
+            
+            .brand-logo .main-name { letter-spacing: 2px; }
+            .brand-logo .sub-name { letter-spacing: 0.3em; }
+            
+            .logo img { height: 55px; }
+            .about-grid .about-image-grid { gap: 0.6rem; }
+            .hero { padding-top: 6rem; }
+            .hero-content p { max-width: 100%; }
         }
+        
         @media (max-width: 600px) {
-            .brand-mark .main-title { font-size: 2.6rem; }
-            .brand-mark .sub-title { font-size: 0.8rem; letter-spacing: 4px; }
+            .brand-logo .main-name { 
+                letter-spacing: 1px; 
+                font-weight: 600;
+            }
+            .brand-logo .sub-name { 
+                letter-spacing: 0.2em; 
+                font-size: clamp(0.7rem, 3vw, 0.9rem);
+                padding-top: 0.4rem;
+            }
+            
             .section-title { font-size: 2rem; }
             .stats-grid {
                 grid-template-columns: 1fr 1fr;
@@ -606,8 +633,12 @@
             .client-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
-            .logo img { height: 45px; }  /* smaller on mobile but still visible */
+            .logo img { height: 45px; }
             .logo-text { font-size: 1.4rem; }
+            .hero-content p { font-size: 0.95rem; }
+            .hero-image { aspect-ratio: 1/1; max-height: 40vh; }
+            .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 0.8rem; }
+            .hero { padding-top: 5rem; }
         }
     </style>
 </head>
@@ -616,6 +647,7 @@
     <!-- ===== NAV ===== -->
     <nav class="navbar" id="navbar">
         <div class="container">
+            <!-- Logo - now a div, not a link -->
             <div class="logo">
                 <img src="https://i.ibb.co/YBckZmFz/AS-LOGO.jpg" alt="AKAISHA S Boutique Studio Logo" />
                 <span class="logo-text">AKAISHA <span>S</span></span>
@@ -642,9 +674,9 @@
         <div class="container">
             <div class="row">
                 <div class="hero-content" data-aos="fade-right">
-                    <div class="brand-mark">
-                        <h1 class="main-title">AKAISHA <span class="highlight">S</span></h1>
-                        <div class="sub-title">BOUTIQUE STUDIO</div>
+                    <div class="brand-logo">
+                        <h1 class="main-name">AKAISHA <span class="highlight">S</span></h1>
+                        <div class="sub-name">BOUTIQUE STUDIO</div>
                     </div>
                     <p>Bridal Wear · Designer Blouses · Indo-Western · Western · Custom Stitching</p>
                     <div class="hero-buttons">
@@ -831,6 +863,7 @@
             <div>
                 <h3 style="color:#fff; font-family:'Playfair Display',serif; font-style:italic;">AKAISHA <span style="color:var(--primary-light);">S</span></h3>
                 <p style="max-width:300px; font-weight:300; opacity:0.8;">Luxury designer boutique in Santacruz, Mumbai.</p>
+                <!-- Website link removed from footer -->
             </div>
             <div>
                 <h4 style="color:#fff; font-weight:400;">Quick Links</h4>
