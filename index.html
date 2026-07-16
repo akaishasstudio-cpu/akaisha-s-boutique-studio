@@ -207,7 +207,7 @@
         }
         .brand-logo .main-name {
             font-family: 'Playfair Display', serif;
-            font-size: clamp(2.8rem, 10vw, 5.2rem);
+            font-size: clamp(2.2rem, 8vw, 4.2rem);  /* ← REDUCED FONT SIZE */
             font-weight: 600;
             font-style: italic;
             letter-spacing: 4px;
@@ -940,7 +940,6 @@
                 <div class="appointment-form" data-aos="fade-left">
                     <h3>Request a Call Back</h3>
                     <p>Fill in your details and we'll get back to you within 24 hours.</p>
-                    <!-- ★ YOUR FORMPREE ENDPOINT IS NOW INTEGRATED ★ -->
                     <form id="appointmentForm" action="https://formspree.io/f/xykrkqko" method="POST">
                         <input type="text" name="name" placeholder="Your Full Name *" required />
                         <input type="email" name="email" placeholder="Email Address *" required />
@@ -985,7 +984,6 @@
                 </div>
             </div>
             <div data-aos="fade-left">
-                <!-- ★ YOUR FORMPREE ENDPOINT IS NOW INTEGRATED ★ -->
                 <form id="contactForm" action="https://formspree.io/f/xykrkqko" method="POST">
                     <input type="text" id="formName" name="name" placeholder="Your Name" required style="width:100%; padding:1rem; margin-bottom:1rem; border-radius:50px; border:1px solid #e0d0d6; font-family:inherit; outline:none;" />
                     <input type="email" id="formEmail" name="email" placeholder="Email Address" required style="width:100%; padding:1rem; margin-bottom:1rem; border-radius:50px; border:1px solid #e0d0d6; font-family:inherit; outline:none;" />
