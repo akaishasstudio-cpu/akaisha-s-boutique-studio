@@ -6,7 +6,6 @@
     <title>AKAISHA S Boutique Studio | Designer Bridal Boutique Mumbai</title>
     <meta name="description" content="AKAISHA S Boutique Studio is a luxury ladies fashion boutique in Santacruz, Mumbai, with 10+ years of experience in designer bridal wear, customized blouses, Indo-Western outfits, western wear, premium stitching, and personalized fashion consultation." />
     <meta name="keywords" content="Designer Boutique Mumbai, Ladies Boutique Mumbai, Designer Blouse Mumbai, Bridal Boutique Mumbai, Custom Stitching Mumbai, Bridal Lehenga Designer, Fashion Designer Mumbai, Indo Western Boutique, Wedding Dress Boutique, Boutique Near Me, Luxury Boutique Mumbai, Designer Dress Mumbai" />
-    <!-- Canonical kept for SEO (not visible on page) -->
     <link rel="canonical" href="https://akaishastudio.in" />
 
     <!-- Google Fonts -->
@@ -116,7 +115,6 @@
             align-items: center;
             justify-content: space-between;
         }
-        /* Logo - no longer a link, just a div */
         .logo {
             display: flex;
             align-items: center;
@@ -514,6 +512,90 @@
             font-size: 1.1rem;
         }
 
+        /* APPOINTMENT SECTION */
+        #appointment {
+            padding: 4rem 0;
+            scroll-margin-top: 6rem;
+        }
+        .appointment-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+        .appointment-info {
+            background: #fff;
+            padding: 2.5rem;
+            border-radius: 30px;
+            box-shadow: var(--shadow);
+        }
+        .appointment-info h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+        .appointment-info ul {
+            list-style: none;
+            padding: 0;
+        }
+        .appointment-info ul li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #f0e3e8;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .appointment-info ul li i {
+            color: var(--primary);
+            font-size: 1.2rem;
+            width: 28px;
+        }
+        .appointment-info ul li:last-child {
+            border-bottom: none;
+        }
+
+        .appointment-form {
+            background: #fff;
+            padding: 2.5rem;
+            border-radius: 30px;
+            box-shadow: var(--shadow);
+        }
+        .appointment-form h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+        .appointment-form p {
+            color: var(--text-soft);
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+        }
+        .appointment-form input,
+        .appointment-form select,
+        .appointment-form textarea {
+            width: 100%;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 50px;
+            border: 1px solid #e0d0d6;
+            font-family: inherit;
+            outline: none;
+            transition: 0.25s;
+            background: #fdfafb;
+        }
+        .appointment-form input:focus,
+        .appointment-form select:focus,
+        .appointment-form textarea:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(201, 21, 78, 0.1);
+        }
+        .appointment-form textarea {
+            border-radius: 20px;
+            resize: vertical;
+        }
+
         .footer {
             background: #1F0D17;
             color: #E8D5D9;
@@ -536,7 +618,6 @@
             color: var(--primary-light);
             transform: scale(1.1);
         }
-        /* Removed .canonical-link styles */
 
         .floating {
             position: fixed;
@@ -568,7 +649,7 @@
         .floating .top { background: var(--text-dark); }
 
         @media (max-width: 992px) {
-            .hero .row, .about-grid, .contact-grid {
+            .hero .row, .about-grid, .contact-grid, .appointment-grid {
                 grid-template-columns: 1fr;
             }
             .hero .row { gap: 2rem; }
@@ -600,6 +681,7 @@
             .about-grid .about-image-grid { gap: 0.6rem; }
             .hero { padding-top: 6rem; }
             .hero-content p { max-width: 100%; }
+            #appointment { scroll-margin-top: 5rem; }
         }
         
         @media (max-width: 600px) {
@@ -639,6 +721,9 @@
             .hero-image { aspect-ratio: 1/1; max-height: 40vh; }
             .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 0.8rem; }
             .hero { padding-top: 5rem; }
+            .appointment-info { padding: 1.5rem; }
+            .appointment-form { padding: 1.5rem; }
+            #appointment { scroll-margin-top: 4rem; }
         }
     </style>
 </head>
@@ -647,7 +732,6 @@
     <!-- ===== NAV ===== -->
     <nav class="navbar" id="navbar">
         <div class="container">
-            <!-- Logo - now a div, not a link -->
             <div class="logo">
                 <img src="https://i.ibb.co/YBckZmFz/AS-LOGO.jpg" alt="AKAISHA S Boutique Studio Logo" />
                 <span class="logo-text">AKAISHA <span>S</span></span>
@@ -660,6 +744,7 @@
                 <li><a href="#testimonials">Testimonials</a></li>
                 <li><a href="#clients">Clients</a></li>
                 <li><a href="#faq">FAQ</a></li>
+                <li><a href="#appointment">Appointment</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li><a href="#appointment" class="btn-luxury" style="padding:0.5rem 1.8rem; font-size:0.85rem;">Book</a></li>
             </ul>
@@ -832,6 +917,60 @@
         </div>
     </section>
 
+    <!-- ===== APPOINTMENT SECTION ===== -->
+    <section id="appointment">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Book an <span class="highlight">Appointment</span></h2>
+            <p class="section-sub" data-aos="fade-up">Schedule a consultation for your dream outfit</p>
+            <div class="appointment-grid">
+                <div class="appointment-info" data-aos="fade-right">
+                    <h3><i class="fas fa-clock" style="color:var(--primary);"></i> What to Expect</h3>
+                    <ul>
+                        <li><i class="fas fa-calendar-check"></i> 45–60 minute personalized consultation</li>
+                        <li><i class="fas fa-tshirt"></i> Fabric selection &amp; design discussion</li>
+                        <li><i class="fas fa-tape"></i> Precise measurements &amp; fitting guide</li>
+                        <li><i class="fas fa-palette"></i> Color &amp; embroidery style recommendations</li>
+                        <li><i class="fas fa-rupee-sign"></i> Transparent pricing &amp; timeline discussion</li>
+                    </ul>
+                    <div style="margin-top:1.5rem; padding-top:1.5rem; border-top:1px solid #f0e3e8;">
+                        <p><strong>📍 Location:</strong> House 1A, 1st Gauthan Lane, Tilak Road, Santacruz (West), Mumbai – 400054</p>
+                        <p style="margin-top:0.5rem;"><strong>📞 Call:</strong> +91 9082130882</p>
+                    </div>
+                </div>
+                <div class="appointment-form" data-aos="fade-left">
+                    <h3>Request a Call Back</h3>
+                    <p>Fill in your details and we'll get back to you within 24 hours.</p>
+                    <!-- ★ YOUR FORMPREE ENDPOINT IS NOW INTEGRATED ★ -->
+                    <form id="appointmentForm" action="https://formspree.io/f/xykrkqko" method="POST">
+                        <input type="text" name="name" placeholder="Your Full Name *" required />
+                        <input type="email" name="email" placeholder="Email Address *" required />
+                        <input type="tel" name="phone" placeholder="Phone Number *" required />
+                        <select name="service" required>
+                            <option value="">Select Service *</option>
+                            <option value="Bridal Wear">Bridal Wear</option>
+                            <option value="Designer Blouse">Designer Blouse</option>
+                            <option value="Indo-Western">Indo-Western</option>
+                            <option value="Western Wear">Western Wear</option>
+                            <option value="Custom Stitching">Custom Stitching</option>
+                            <option value="Fashion Consultation">Fashion Consultation</option>
+                        </select>
+                        <input type="date" name="preferred_date" required />
+                        <select name="preferred_time" required>
+                            <option value="">Preferred Time *</option>
+                            <option value="10:00 AM - 12:00 PM">10:00 AM - 12:00 PM</option>
+                            <option value="12:00 PM - 2:00 PM">12:00 PM - 2:00 PM</option>
+                            <option value="2:00 PM - 4:00 PM">2:00 PM - 4:00 PM</option>
+                            <option value="4:00 PM - 6:00 PM">4:00 PM - 6:00 PM</option>
+                            <option value="6:00 PM - 8:00 PM">6:00 PM - 8:00 PM</option>
+                        </select>
+                        <textarea name="message" rows="3" placeholder="Tell us about your dream outfit..."></textarea>
+                        <button type="submit" class="btn-luxury" style="width:100%; justify-content:center;"><i class="fas fa-calendar-check"></i> Book Appointment</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- ===== CONTACT ===== -->
     <section id="contact" class="container" style="padding:2rem 0 3rem;">
         <h2 class="section-title" data-aos="fade-up">Get in <span class="highlight">Touch</span></h2>
@@ -846,11 +985,12 @@
                 </div>
             </div>
             <div data-aos="fade-left">
-                <form id="contactForm" style="background:#fff; padding:2rem; border-radius:30px; box-shadow:var(--shadow);">
-                    <input type="text" id="formName" placeholder="Your Name" required style="width:100%; padding:1rem; margin-bottom:1rem; border-radius:50px; border:1px solid #e0d0d6; font-family:inherit; outline:none;" />
-                    <input type="email" id="formEmail" placeholder="Email Address" required style="width:100%; padding:1rem; margin-bottom:1rem; border-radius:50px; border:1px solid #e0d0d6; font-family:inherit; outline:none;" />
-                    <input type="tel" id="formPhone" placeholder="Phone Number" style="width:100%; padding:1rem; margin-bottom:1rem; border-radius:50px; border:1px solid #e0d0d6; font-family:inherit; outline:none;" />
-                    <textarea id="formMessage" placeholder="Tell us about your dream outfit..." rows="3" required style="width:100%; padding:1rem; border-radius:20px; border:1px solid #e0d0d6; font-family:inherit; resize:vertical; outline:none;"></textarea>
+                <!-- ★ YOUR FORMPREE ENDPOINT IS NOW INTEGRATED ★ -->
+                <form id="contactForm" action="https://formspree.io/f/xykrkqko" method="POST">
+                    <input type="text" id="formName" name="name" placeholder="Your Name" required style="width:100%; padding:1rem; margin-bottom:1rem; border-radius:50px; border:1px solid #e0d0d6; font-family:inherit; outline:none;" />
+                    <input type="email" id="formEmail" name="email" placeholder="Email Address" required style="width:100%; padding:1rem; margin-bottom:1rem; border-radius:50px; border:1px solid #e0d0d6; font-family:inherit; outline:none;" />
+                    <input type="tel" id="formPhone" name="phone" placeholder="Phone Number" style="width:100%; padding:1rem; margin-bottom:1rem; border-radius:50px; border:1px solid #e0d0d6; font-family:inherit; outline:none;" />
+                    <textarea id="formMessage" name="message" placeholder="Tell us about your dream outfit..." rows="3" required style="width:100%; padding:1rem; border-radius:20px; border:1px solid #e0d0d6; font-family:inherit; resize:vertical; outline:none;"></textarea>
                     <button type="submit" class="btn-luxury" style="width:100%; margin-top:1rem; justify-content:center;"><i class="fas fa-paper-plane"></i> Send Enquiry</button>
                 </form>
             </div>
@@ -863,11 +1003,10 @@
             <div>
                 <h3 style="color:#fff; font-family:'Playfair Display',serif; font-style:italic;">AKAISHA <span style="color:var(--primary-light);">S</span></h3>
                 <p style="max-width:300px; font-weight:300; opacity:0.8;">Luxury designer boutique in Santacruz, Mumbai.</p>
-                <!-- Website link removed from footer -->
             </div>
             <div>
                 <h4 style="color:#fff; font-weight:400;">Quick Links</h4>
-                <a href="#services">Services</a> · <a href="#portfolio">Gallery</a> · <a href="#clients">Clients</a> · <a href="#contact">Contact</a>
+                <a href="#services">Services</a> · <a href="#portfolio">Gallery</a> · <a href="#clients">Clients</a> · <a href="#appointment">Book</a> · <a href="#contact">Contact</a>
             </div>
             <div>
                 <h4 style="color:#fff; font-weight:400;">Follow</h4>
@@ -911,22 +1050,53 @@
             });
         });
 
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const name = document.getElementById('formName').value.trim();
-            const email = document.getElementById('formEmail').value.trim();
-            const message = document.getElementById('formMessage').value.trim();
-            if (name && email && message) {
-                alert('✨ Thank you, ' + name + '! Your enquiry has been sent.');
-                this.reset();
-            } else {
-                alert('Please fill in all required fields.');
-            }
-        });
-
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', function() {
                 document.getElementById('navLinks').classList.remove('open');
+            });
+        });
+
+        // ===== APPOINTMENT FORM (sends to Gmail via Formspree) =====
+        document.getElementById('appointmentForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const form = this;
+            const formData = new FormData(form);
+            
+            fetch('https://formspree.io/f/xykrkqko', {
+                method: 'POST',
+                body: formData,
+                headers: { 'Accept': 'application/json' }
+            }).then(response => {
+                if (response.ok) {
+                    alert('✨ Your appointment request has been sent! We\'ll contact you within 24 hours.');
+                    form.reset();
+                } else {
+                    alert('❌ Oops! Something went wrong. Please try again or call us directly.');
+                }
+            }).catch(() => {
+                alert('❌ Network error! Please check your connection.');
+            });
+        });
+
+        // ===== CONTACT FORM (sends to Gmail via Formspree) =====
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const form = this;
+            const formData = new FormData(form);
+            
+            fetch('https://formspree.io/f/xykrkqko', {
+                method: 'POST',
+                body: formData,
+                headers: { 'Accept': 'application/json' }
+            }).then(response => {
+                if (response.ok) {
+                    alert('✨ Thank you! Your enquiry has been sent.');
+                    form.reset();
+                } else {
+                    alert('❌ Oops! Something went wrong. Please try again.');
+                }
+            }).catch(() => {
+                alert('❌ Network error! Please check your connection.');
             });
         });
     </script>
